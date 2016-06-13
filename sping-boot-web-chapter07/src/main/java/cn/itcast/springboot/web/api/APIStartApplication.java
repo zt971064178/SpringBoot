@@ -12,5 +12,4 @@ public class APIStartApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(APIStartApplication.class, args) ;
 	}
-	
 }
