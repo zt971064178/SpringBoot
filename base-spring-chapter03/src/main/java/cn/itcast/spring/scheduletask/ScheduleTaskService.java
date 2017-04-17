@@ -1,10 +1,10 @@
 package cn.itcast.spring.scheduletask;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 // 计划任务
 @Service
@@ -19,7 +19,7 @@ public class ScheduleTaskService {
 	}
 	
 	// 申明这是一个计划任务  每天的10点16分执行
-	@Scheduled(cron = "0 16 10 ? * *")
+	@Scheduled(cron = "0 33 10 ? * *")
 	public void fixTimeExecution() {
 		System.out.println("在指定时间:"+sdf.format(new Date())+"执行");
 	}
