@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 // 通过@ConfigurationProperties加载properties文件内的配置
 // 通过prefix属性指定properties的配置的前缀
 // 通过locations指定properties文件的 位置，如：@ConfigurationProperties(prefix="author",locations={"classpath:config/author.properties"})
-// 本利不需要配置locations
+// 本例不需要配置locations
 @ConfigurationProperties(prefix="author")
 public class AuthorSettings{
 
