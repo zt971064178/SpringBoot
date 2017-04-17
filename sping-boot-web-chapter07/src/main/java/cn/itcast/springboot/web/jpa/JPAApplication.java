@@ -5,7 +5,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.annotation.Commit;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(ApplicationConfiguration.class)
@@ -15,6 +17,8 @@ public class JPAApplication {
 	private UserRepository userRepository ;
 	
 	@Test
+	@Transactional
+	@Commit
 	public void test() {
 		userRepository.save(new User("AAA", 10)) ;
 		userRepository.save(new User("BBB", 20)) ;
