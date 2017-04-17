@@ -16,7 +16,7 @@ import org.springframework.core.io.Resource;
 // 诸如配置配件使用，使用@PropertySource指定文件地址，
 // 若使用@Value注入，则需要配置PropertySourcesPlaceholderConfigurer的Bean
 // 还可以从Environment中获取property文件中的内容
-@PropertySource(value = "classpath:cn/itcast/spring/el/test.properties",ignoreResourceNotFound = true)
+@PropertySource(value = "classpath:test.properties",ignoreResourceNotFound = true)
 public class ELConfig {
 
 	// 注入普通字符串
@@ -36,7 +36,7 @@ public class ELConfig {
 	private String fromAnother ;
 	
 	// 注入文件资源
-	@Value("classpath:cn/itcast/spring/el/test.txt")
+	@Value("classpath:test.txt")
 	private Resource testFile ;
 	
 	// 注入网址资源
